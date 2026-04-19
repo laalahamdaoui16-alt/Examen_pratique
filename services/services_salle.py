@@ -33,5 +33,7 @@ class ServiceSalle:
     def rechercher_salle(self, code):
         return self.dao_salle.get_salle(code)
 
+
+
     def recuperer_salles(self):
         return self.dao_salle.get_salles()
