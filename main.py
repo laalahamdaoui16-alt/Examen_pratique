@@ -46,6 +46,7 @@ from services.services_salle import ServiceSalle
 
 service = ServiceSalle()
 
+
 salles = [
     Salle("C1", "Salle Classe 1", "Classe", 25),
     Salle("C2", "Salle Classe 2", "Classe", 30),
