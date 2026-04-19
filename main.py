@@ -22,3 +22,21 @@ for s in dao.get_salles():
 
 dao.delete_salle("S01")
 print("Salle supprimée")
+
+from models.salle import Salle
+from services.services_salle import ServiceSalle
+
+service = ServiceSalle()
+
+s1 = Salle("S01", "Salle A", "Classe", 25)
+print(service.ajouter_salle(s1))
+
+s1.libelle = "Salle A modifiee"
+print(service.modifier_salle(s1))
+
+print(service.rechercher_salle("S01"))
+
+for s in service.recuperer_salles():
+    print(s.afficher_infos())
+
+service.supprimer_salle("S01")
