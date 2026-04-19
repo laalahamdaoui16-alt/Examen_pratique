@@ -66,7 +66,6 @@ class DataSalle:
         lignes = curseur.fetchall()
         curseur.close()
         connexion.close()
-
         liste = []
         for ligne in lignes:
             liste.append(Salle(ligne[0], ligne[1], ligne[2], ligne[3]))
