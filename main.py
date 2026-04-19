@@ -41,6 +41,20 @@ for s in service.recuperer_salles():
 
 service.supprimer_salle("S01")
 
+from models.salle import Salle
+from services.services_salle import ServiceSalle
+
+service = ServiceSalle()
+
+salles = [
+    Salle("C1", "Salle Classe 1", "Classe", 25),
+    Salle("C2", "Salle Classe 2", "Classe", 30),
+    Salle("C3", "Salle Classe 3", "Classe", 20),
+]
+
+for s in salles:
+    print(service.ajouter_salle(s))
+
 from views.view_salle import ViewSalle
 
 app = ViewSalle()
