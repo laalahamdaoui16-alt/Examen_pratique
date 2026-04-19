@@ -40,3 +40,8 @@ for s in service.recuperer_salles():
     print(s.afficher_infos())
 
 service.supprimer_salle("S01")
+
+from views.view_salle import ViewSalle
+
+app = ViewSalle()
+app.mainloop()
